@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "Omnispindle"
+name = "PROJECT_NAME"
 version = "0.1.0"
 description = "A FastMCP-based todo list server"
 requires-python = ">=3.11"
@@ -14,4 +14,4 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/Omnispindle"]
+packages = ["src/PROJECT_NAME"]

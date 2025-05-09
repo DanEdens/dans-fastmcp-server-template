@@ -1,18 +1,18 @@
-# Docker Setup for MCP Todo Server (Omnispindle)
+# Docker Setup for MCP Server (PROJECT_NAME)
 
-This document provides instructions for deploying the MCP Todo Server (Omnispindle implementation) using Docker on various platforms.
+This document provides instructions for deploying the MCP Server (PROJECT_NAME implementation) using Docker on various platforms.
 
 ## Overview
 
-The Docker setup for MCP Todo Server includes:
+The Docker setup for MCP Server includes:
 
 1. **MongoDB** - For storing todo items and lessons learned
 2. **Mosquitto MQTT** - For event-driven communication
-3. **MCP Todo Server** - The main API for todo management
+3. **MCP Server** - The main API for todo management
 4. **Todo Dashboard** - A simple web UI for managing todos
 
 ## Prerequisites
-
+      
 - Docker and Docker Compose installed
 - At least 4GB of free RAM
 - 2GB of free disk space
@@ -142,7 +142,7 @@ The following helper scripts are included:
    ```bash
    # In one terminal
    mosquitto_sub -h localhost -t test
-   
+
    # In another terminal
    mosquitto_pub -h localhost -t test -m "hello"
    ```
@@ -169,4 +169,4 @@ For production deployment, consider:
 
 ## License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License.

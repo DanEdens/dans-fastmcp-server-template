@@ -7,7 +7,7 @@ import sys
 import os
 from fastapi.testclient import TestClient
 from fastmcp import FastMCPServer
-from Omnispindle.server import create_app
+from PROJECT_NAME.server import create_app
 
 # Add src directory to Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))

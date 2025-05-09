@@ -1,10 +1,10 @@
-# FastMCP Todo Server
+# FastMCP Server Template
 
-A FastMCP-based Todo Server for the [Swarmonomicon](https://github.com/DanEdens/madness_interactive/tree/main/projects/common/Swarmonomicon) project. This server receives todo requests via FastMCP and stores them in MongoDB for processing by the Swarmonomicon todo worker.
+A FastMCP Server Template for the [Swarmonomicon](https://github.com/DanEdens/madness_interactive/tree/main/projects/common/Swarmonomicon) project. etc
 
 ## Features
 
-- FastMCP server for receiving todo requests
+- FastMCP server for receiving requests
 - MongoDB integration for todo storage
 - Compatible with Swarmonomicon todo worker
 - Python-based implementation
@@ -13,8 +13,8 @@ A FastMCP-based Todo Server for the [Swarmonomicon](https://github.com/DanEdens/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/DanEdens/Omnispindle.git
-   cd Omnispindle
+   git clone https://github.com/DanEdens/PROJECT_NAME.git
+   cd PROJECT_NAME
    ```
 
 2. Install uv (if not already installed):
@@ -43,8 +43,8 @@ A FastMCP-based Todo Server for the [Swarmonomicon](https://github.com/DanEdens/
 6. Create a `.env` file with your configuration:
    ```bash
    MONGODB_URI=mongodb://localhost:27017
-   MONGODB_DB=swarmonomicon
-   MONGODB_COLLECTION=todos
+   MONGODB_DB=PROJECT_NAME
+   MONGODB_COLLECTION=PROJECT_NAME
    ```
 
 ## Usage
@@ -53,7 +53,7 @@ A FastMCP-based Todo Server for the [Swarmonomicon](https://github.com/DanEdens/
 
 1. Start the FastMCP server:
    ```bash
-   python -m src.Omnispindle
+   python -m src.PROJECT_NAME
    ```
 
 ### Adding Todos
@@ -63,7 +63,7 @@ You can add todos using FastMCP in several ways:
 1. Using FastMCP Python client:
    ```python
    from fastmcp import FastMCPClient
-   
+
    client = FastMCPClient()
    response = await client.call_tool("add_todo", {
        "description": "Example todo",
@@ -88,7 +88,7 @@ You can add todos using FastMCP in several ways:
    pytest tests/
    ```
 
-2. Run tests with coverage:
+2. Run tests with coverage:Alex
    ```bash
    pytest --cov=src tests/
    ```

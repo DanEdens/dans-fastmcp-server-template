@@ -10,7 +10,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* cancel
 
 # Copy requirements files
 COPY requirements.txt requirements-dev.txt ./
@@ -68,9 +68,9 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 EXPOSE 8080
 
 # Set the entrypoint
-CMD ["python", "-m", "src.fastmcp_todo_server"]
+CMD ["python", "-m", "src.fastmcp_server"]
 
 # Add metadata
 LABEL maintainer="Danedens31@gmail.com"
-LABEL description="Omnispindle - MCP Todo Server implementation"
-LABEL version="0.1.0" 
+LABEL description="PROJECT_NAME - MCP Server implementation"
+LABEL version="0.1.0"

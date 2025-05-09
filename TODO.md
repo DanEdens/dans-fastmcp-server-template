@@ -4,43 +4,44 @@ This document outlines the planned enhancements and fixes for the Multi-Gateway 
 
 ## High Priority Tasks
 
-### 1. Fix Process Gateway Stats Function
-- [x] Fix regex pattern for date validation (remove double escaping)
-- [x] Remove duplicate date sorting code
-- [x] Ensure proper handling of date information in MQTT topics
+### 1. Setup template from Omnispindle
+- [ ] replace omnispindle with PROJECT_NAME
+- [ ] make a contrubiting guide
+- [ ]
 
-### 2. Complete Gateway Details UI
-- [X] Implement full date-based filtering in Gateway Details view
-- [X] Add comparison visualization between dates
-- [X] Add visual indicators for metrics changes (increase/decrease)
-- [X] Complete gateway selection and filtering UI
+### 2. refactor to make it easier to extend
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
-### 3. Enhance mongo_tasks.py
-- [x] Optimize MongoDB queries across date collections
-- [X] Add support for querying multiple date collections
-- [x] Standardize date handling between MongoDB and MQTT
-- [x] Include metadata to support date-based comparisons
+### 3.
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 ## Medium Priority Tasks
 
-### 4. Additional Dashboard Features
-- [x] Add date range selection for trend analysis
-- [ ] Implement gateway grouping by characteristics
-- [ ] Add data export capabilities
-- [o] Create dashboard metrics summary across dates
+### 4.
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
-### 5. Visualization Improvements
-- [X] Add trend charts showing metrics over time
-- [ ] Implement heatmaps for gateway activity patterns
-- [X] Add color-coded performance indicators
+### 5.
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 ## Low Priority Tasks
 
 ### 6. Documentation and Usability
-- [ ] Add tooltips explaining dashboard metrics
-- [o] Create user documentation
-- [ ] Implement responsive design improvements for mobile
-- [o] Add configuration options for default views
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 ## Technical Implementation Details
 

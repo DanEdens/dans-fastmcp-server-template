@@ -2,7 +2,7 @@
 .DS_Store
 /.specstory
 /.idea
-/src/fastmcp_todo_server/.idea
-/src/Omnispindle/.idea
 /venv
 .env
+# SpecStory explanation file
+.specstory/.what-is-this.md

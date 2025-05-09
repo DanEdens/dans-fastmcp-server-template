@@ -2,7 +2,7 @@ import asyncio
 import sys
 sys.path.append('src')
 
-from Omnispindle import add_todo_tool
+from PROJECT_NAME import add_todo_tool
 
 async def main():
     result = await add_todo_tool(
