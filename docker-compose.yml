@@ -10,7 +10,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=swarmonomicon
+      - MONGO_INITDB_DATABASE=PROJECT_NAME
     healthcheck:
       test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
       interval: 10s
@@ -46,24 +46,24 @@ services:
           memory: 256M
           cpus: '0.5'
 
-  # MCP Todo Server (Omnispindle)
-  mcp-todo-server:
+  # MCP Server ()
+  mcp-server:
     build:
       context: .
       dockerfile: Dockerfile
-    image: omnispindle/mcp-todo-server:latest
+    image: PROJECT_NAME/mcp-server:latest
     restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
       - MONGODB_URI=mongodb://mongodb:27017
-      - MONGODB_DB=swarmonomicon
+      - MONGODB_DB=PROJECT_NAME
       - MONGODB_COLLECTION=todos
       - AWSIP=mongodb
       - AWSPORT=27017
       - MQTT_HOST=mosquitto
       - MQTT_PORT=1883
-      - DeNa=omnispindle
+      - DeNa=PROJECT_NAME
     deploy:
       resources:
         limits:
@@ -80,16 +80,16 @@ services:
     build:
       context: ./todo-dashboard
       dockerfile: Dockerfile
-    image: omnispindle/todo-dashboard:latest
+    image: PROJECT_NAME/todo-dashboard:latest
     restart: unless-stopped
     ports:
       - "3001:80"
     environment:
-      - API_URL=http://mcp-todo-server:8080
+      - API_URL=http://mcp-server:8080
     depends_on:
-      - mcp-todo-server
+      - mcp-server
 
 volumes:
   mongodb_data:
   mosquitto_data:
-  mosquitto_log: 
+  mosquitto_log:

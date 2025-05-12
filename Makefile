@@ -1,4 +1,4 @@
-# Makefile for FastMCP Todo Server
+# Makefile for FastMCP Server
 
 .PHONY: install run test coverage clean status
 
@@ -10,7 +10,7 @@ install:
 
 # Run the FastMCP server
 run:
-	python3.11 -m src.Omnispindle
+	python3.11 -m src.PROJECT_NAME
 
 # deploy
 deploy:

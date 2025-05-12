@@ -1,8 +1,8 @@
 module.exports = {
     apps: [{
-        name: 'Omnispindle',
+        name: 'PROJECT_NAME',
         script: 'python3.11',
-        args: '-m src.Omnispindle',
+        args: '-m src.PROJECT_NAME',
         watch: '.',
         env: {
             NODE_ENV: 'development'
@@ -20,17 +20,17 @@ module.exports = {
             user: 'ubuntu',
             host: process.env.AWSIP || 'ENTER_AWS_IP_HERE',
             ref: 'origin/prod',
-            repo: 'git@github.com:danedens/omnispindle.git',
-            path: '/home/ubuntu/Omnispindle',
+            repo: 'git@github.com:danedens/PROJECT_NAME.git',
+            path: '/home/ubuntu/PROJECT_NAME',
             'pre-deploy-local': 'whoami',
-            'post-deploy': 'pm2 restart Omnispindle',
+            'post-deploy': 'pm2 restart PROJECT_NAME',
             'pre-setup': ''
         },
         development: {
             user: process.env.USER,
             host: 'localhost',
-            repo: 'git@github.com:danedens/omnispindle.git',
-            path: '/Users/d.edens/lab/madness_interactive/projects/python/Omnispindle',
+            repo: 'git@github.com:danedens/PROJECT_NAME.git',
+            path: '/Users/d.edens/lab/madness_interactive/projects/python/PROJECT_NAME',
             'post-deploy': 'pip install -r requirements.txt && pm2 reload ecosystem.config.js --env development',
             'pre-setup': ''
         }

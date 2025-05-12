@@ -12,7 +12,7 @@ The Docker setup for MCP Server includes:
 4. **Todo Dashboard** - A simple web UI for managing todos
 
 ## Prerequisites
-      
+
 - Docker and Docker Compose installed
 - At least 4GB of free RAM
 - 2GB of free disk space
@@ -155,7 +155,7 @@ The Todo Dashboard is a simple web UI built with HTML, CSS (Bootstrap), and Java
 
 ### API Endpoints
 
-The MCP Todo Server API endpoints are defined in the server implementation. If you need to add new endpoints, you'll need to modify the server code in the `src/fastmcp_todo_server` directory.
+The MCP Server API endpoints are defined in the server implementation. If you need to add new endpoints, you'll need to modify the server code in the `src/fastmcp_server` directory.
 
 ## Production Deployment
 
